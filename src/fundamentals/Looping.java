@@ -36,6 +36,15 @@ public class Looping
 		sc.close();
 	}
 	
+	/*
+	 * public void ForEachL() {
+	 * System.out.println("Let's Try making a Fibonacci Sequence"); System.out.
+	 * println("Fibonacci Sequence is expected to run for how many times?"); Scanner
+	 * sc= new Scanner(System.in); int fibo=0; int n=sc.nextInt(); int[] arr= new
+	 * int[n]; for(int i=0;i<n;i++) { arr[i]=i; } for(int curr:arr) { fibo+=curr;
+	 * System.out.print(fibo+" "); } sc.close(); }
+	 */
+	
 	public void forL()
 	{
 		System.out.println("Let's Try making a Factorial Program");
@@ -57,7 +66,7 @@ public class Looping
 		Scanner sc= new Scanner(System.in);
 		Looping lp= new Looping();
 		System.out.println("Which loop do you want to use?");
-		System.out.println("1)While"+" "+"2)Do While"+" "+"3)For"+" ");
+		System.out.println("1)While"+" "+"2)Do While"+" "+"3)For"+" "+"4)For Each"+" ");
 		String response = sc.nextLine();
 		
 		
@@ -65,16 +74,23 @@ public class Looping
 		{
 			lp.whileL(sc);
 		}
-		else if(response=="Do While")
+		else if(response.equalsIgnoreCase("Do While"))
 		{
 			lp.DowhileL();
 		}
-		else if(response=="For")
+		else if(response.equalsIgnoreCase("For"))
+		
 		{
 			lp.forL();
 		}
+		/*
+		 * else if(response.equalsIgnoreCase("For Each"))
+		 * 
+		 * { lp.ForEachL(); }
+		 */
 		else
 			System.out.println("You haven't chosen the right option");
 		sc.close();
 	}
+	
 }
