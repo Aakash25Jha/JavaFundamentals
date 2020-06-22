@@ -7,7 +7,7 @@ public class StringEquality {
 	}
 
 	public StringEquality(String a, String b) {
-		if (a == b) {
+		if (a.equals(b)) {
 			System.out.println("== Method works");
 		} else if (intern(a, b)) {
 			System.out.println("Intern method works");
@@ -19,12 +19,12 @@ public class StringEquality {
 	private boolean intern(String a, String b) {
 		String x = a.intern();
 		String y = b.intern();
-		if (x == y)
-			return true;
+		if (!(x.equals(y))) {
+			return false;}
 		else
-			return false;
+			return true;
 	}
-
+		
 	public static void main(String args[])
 		{
 			Scanner sc= new Scanner(System.in);
